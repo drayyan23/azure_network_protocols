@@ -23,10 +23,12 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>High-Level Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Create a Windows 10 Virtual Machine and Create a Linux (Ubuntu) Virtual Machine
+- Observe ICMP Traffic
+- Observe SSH Traffic
+- Observe DHCP Traffic)
+- Observe DNS Traffic
+- Observe RDP Traffic
 
 <h2>Actions and Observations</h2>
 
@@ -34,7 +36,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Create a Resource Group to organize resources, then create a Windows 10 Virtual Machine (VM) within that Resource Group, allowing it to create a new Virtual Network (Vnet) and Subnet. Next, create a Linux (Ubuntu) VM within the same Resource Group and Vnet. Finally, monitor network performance by observing the Virtual Network in Network Watcher.
 </p>
 <br />
 
@@ -42,7 +44,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Connect to Windows 10 VM via Remote Desktop, install Wireshark, filter for ICMP traffic, ping Ubuntu VM from Windows 10, monitor traffic in Wireshark. Ping a public website from Windows 10, then initiate perpetual ping to Ubuntu VM. Disable ICMP traffic in Ubuntu VM's Network Security Group, observe effects in Wireshark and ping activity. Re-enable ICMP traffic and verify resumed activity. Stop ping activity when finished.
 </p>
 <br />
 
@@ -50,6 +52,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Filter SSH traffic in Wireshark, establish an SSH connection from Windows 10 to the Ubuntu VM, input commands, and observe SSH traffic in Wireshark. Exit the SSH connection to conclude the monitoring and analysis of SSH traffic between the two VMs, offering insights into network communication and security implications.
 </p>
+<br />
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Repeat these steps for the remaining serveres (DHCP, DNS, and RDP)</p>
 <br />
